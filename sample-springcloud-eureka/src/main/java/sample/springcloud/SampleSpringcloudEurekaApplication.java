@@ -2,12 +2,14 @@ package sample.springcloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 @SpringBootApplication
-public class SampleSpringcloudEureka1Application {
+@EnableEurekaServer
+public class SampleSpringcloudEurekaApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SampleSpringcloudEureka1Application.class, args);
+		SpringApplication.run(SampleSpringcloudEurekaApplication.class, args);
 	}
 
 }

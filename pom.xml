@@ -122,7 +122,8 @@
     </build>
 
     <modules>
-        <module>sample-springcloud-eureka1</module>
+        <module>sample-springcloud-eureka</module>
+        <module>sample-springcloud-servicehi</module>
     </modules>
 
 </project>

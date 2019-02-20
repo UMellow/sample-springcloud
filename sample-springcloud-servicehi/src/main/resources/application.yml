@@ -1,0 +1,18 @@
+server:
+  port: 8010
+
+spring:
+  application:
+    name: service-hi
+
+eureka:
+  client:
+    serviceUrl:
+      # 地址之间不能有空格，否则启动时会报错。但该报错，实测不影响服务的注册
+      defaultZone: http://localhost:8761/eureka,http://localhost:8762/eureka
+  instance:
+    # 租约续订时间间隔，即发送心跳的间隔时间，单位：秒
+    leaseRenewalIntervalInSeconds: 1
+    # 租约到期时间，单位秒；
+    # 该配置通知服务端如果2秒内未接收到心跳，则视为已失效，可踢出实例列表
+    leaseExpirationDurationInSeconds: 2
