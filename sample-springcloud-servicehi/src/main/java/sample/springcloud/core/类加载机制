@@ -1,0 +1,48 @@
+设计三个类：祖父类（Grandpa）、父亲类（Father）、儿子类（Son），其中，父亲类继承祖父类，儿子类继承父亲类；代码如下：
+``` Grandpa.java
+ public class Grandpa {
+ 
+     static {
+         System.out.println("Grandpa's static area.");
+     }
+ }
+```
+ 
+``` Father.java
+public class Father extends Grandpa {
+
+    protected static int age = 50;
+
+    static {
+        System.out.println("Father's static area.");
+    }
+
+    public Father() {
+        System.out.println("Father's construct method.");
+    }
+}
+```
+
+``` Son.java
+public class Son extends Father {
+
+    static {
+        System.out.println("Son's static area.");
+    }
+
+    public Son() {
+        System.out.println("Son's construct method.");
+    }
+}
+```
+**问题：** 以下代码输出什么？
+```
+public class ClassInitTest {
+
+    public static void main(String[] args) {
+        System.out.println("Father's age: " + Son.age);
+    }
+}
+```
+
+**分析：**
