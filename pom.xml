@@ -124,6 +124,7 @@
     <modules>
         <module>sample-springcloud-eureka</module>
         <module>sample-springcloud-servicehi</module>
+        <module>sample-sc-openfeign</module>
     </modules>
 
 </project>
